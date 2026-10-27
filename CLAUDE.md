@@ -27,6 +27,8 @@ Students are beginners. Every notebook should follow the style of `content/webll
 - JavaScript is reached through pyjs: `import pyjs` then `js = pyjs.js`. Do not use `pyodide.ffi`; it is not available.
 - WebLLM is loaded from a CDN: `webllm = await js.eval("import('https://esm.run/@mlc-ai/web-llm')")`
 - Python dicts become JavaScript objects through JSON: `js.JSON.parse(json.dumps(d))` (wrapped as `js_obj()`). This only works for plain data, so never put a Python function inside a dict passed to `js_obj()`.
+- JavaScript objects become Python dicts the same way in reverse: `json.loads(js.JSON.stringify(obj))`. Do not use `.to_py()`; it fails on WebLLM replies under pyjs.
+- Never test a JavaScript object for truth (`if obj:`); pyjs crashes. Compare with `is not None` instead.
 - Python functions that JavaScript must call (the progress bar) are wrapped with `pyjs.create_callable(fn)`, which returns the JavaScript function and a handle.
 - Create the engine with `webllm.MLCEngine.new()`, set the callback with `engine.setInitProgressCallback(...)`, then `await engine.reload(model_id)`. This avoids passing a callback inside a config object.
 - Requires WebGPU (recent Chrome or Edge on a laptop). Each notebook should check for it at the start.

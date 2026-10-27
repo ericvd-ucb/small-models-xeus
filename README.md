@@ -17,8 +17,15 @@ The goal is one kernel everywhere: the GitHub Pages site, notebook.link, and any
 ## Notebooks
 
 - `content/00_webllm_starter.ipynb`: see which models exist, download one, load it, and chat with it.
+- `content/01_finding_models.ipynb`: browse WebLLM's models, read model names, find model cards, and manage what is saved in the browser.
+- `content/02_talking_to_models.ipynb`: the OpenAI-style chat request and response, system messages, multi-turn chats, and the main settings.
+- `content/03_numbers_all_the_way_down.ipynb`: tokens, token counts, chunking, and embeddings.
+- `content/04_memory.ipynb`: why models do not remember you, and a simple memory system with SQLite and embeddings.
+- `content/05_sat_test_taker.ipynb`: a small model takes SAT-style questions and gets a report card.
+- `content/06_inside_a_model.ipynb`: parameters, weights, tensors, and the files inside a WebLLM model package.
+- `content/07_agents.ipynb`: build a small agent that answers questions by writing SQL, with tools, a loop, and an evaluation.
 
-More notebooks will be ported once the starter works.
+Data files used by notebooks 05 and 07 are in `content/data/`.
 
 ## How it is built
 
