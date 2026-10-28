@@ -8,6 +8,10 @@ The goal is one kernel everywhere: the GitHub Pages site, notebook.link, and any
 
 <https://ericvd-ucb.github.io/small-models-xeus/>
 
+<img width="107" height="20" alt="image" src="https://github.com/user-attachments/assets/e57af0fb-cc4c-472a-a444-1b8023de2064" />
+
+
+
 ## What students need
 
 - A recent Chrome or Edge browser with WebGPU support
